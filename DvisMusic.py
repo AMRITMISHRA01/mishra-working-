@@ -1597,5 +1597,26 @@ async def broadcast_message(client, message):
             pass
 
 
+YouTube-DL command 
+```
+youtube_dl.download_url(url)
+```
+
+
+```
+youtube_dl.download_url(url, {'listformats': True})
+```
+
+
+```
+ydl_opts = {
+    'listformats': True
+}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download_url(url)
+```
+
+
+
 if __name__ == "__main__":
     loop.run_until_complete(main())
